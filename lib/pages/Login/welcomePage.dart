@@ -57,7 +57,6 @@ class _WelcomePageState extends State<WelcomePage> {
 
           const SizedBox(height: 32),
 
-          // Stepper compacto
           SizedBox(
             width: screenSize.width * 0.6,
             child: Stack(
@@ -153,7 +152,7 @@ class _WelcomePageState extends State<WelcomePage> {
 
     return Text(
       titles[step],
-      key: ValueKey<int>(step), // Necesario para AnimatedSwitcher
+      key: ValueKey<int>(step), // AnimatedSwitcher
       style: TextStyle(fontSize: screenWidth * 0.035),
       textAlign: TextAlign.center,
     );
