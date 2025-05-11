@@ -211,7 +211,7 @@ class MovieService {
                     'photo':
                         actor['profile_path'] != null
                             ? 'https://image.tmdb.org/t/p/w500${actor['profile_path']}'
-                            : '', // Foto del actor
+                            : '', 
                   };
                 })
                 .toList();
@@ -240,7 +240,6 @@ class MovieService {
                 : null; // Toma la primera película de la lista como aleatoria
 
         if (randomMovie != null) {
-          // Ahora obtener el reparto de esa película aleatoria
           final movieId = randomMovie['id'];
           final url = Uri.parse(
             'https://api.themoviedb.org/3/movie/$movieId/credits?api_key=$apiKey&language=en-US',
@@ -258,7 +257,7 @@ class MovieService {
                         'photo':
                             actor['profile_path'] != null
                                 ? 'https://image.tmdb.org/t/p/w500${actor['profile_path']}'
-                                : '', // Foto del actor
+                                : '', 
                       };
                     })
                     .toList();
