@@ -69,7 +69,6 @@ class _ProfilePageState extends State<ProfilePage> {
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              // Foto de perfil e información básica
               Row(
                 children: [
                   CircleAvatar(
@@ -86,14 +85,14 @@ class _ProfilePageState extends State<ProfilePage> {
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
                       Text(
-                        'User Name', // Puedes reemplazar esto por una variable de nombre
+                        'User Name',
                         style: TextStyle(
                           fontWeight: FontWeight.bold,
                           fontSize: screenWidth * 0.040,
                         ),
                       ),
                       Text(
-                        'Password', // Aquí podrías incluir la contraseña si se requiere
+                        'Password',
                         style: TextStyle(fontSize: screenWidth * 0.040),
                       ),
                       const SizedBox(height: 15),
@@ -107,9 +106,7 @@ class _ProfilePageState extends State<ProfilePage> {
                           SizedBox(width: screenWidth * 0.05),
                           IconButton(
                             icon: const Icon(Icons.share),
-                            onPressed: () {
-                              // Acción para compartir la información del perfil
-                            },
+                            onPressed: () {},
                           ),
                         ],
                       ),
@@ -159,7 +156,6 @@ class _ProfilePageState extends State<ProfilePage> {
 
               const SizedBox(height: 24),
 
-              // Botón de guardar
               Center(
                 child: buildCustomButton(
                   context: context,
@@ -167,9 +163,7 @@ class _ProfilePageState extends State<ProfilePage> {
                   isDarkMode:
                       Theme.of(context).brightness ==
                       Brightness.dark, // Se verifica si el modo es oscuro
-                  onPressed: () {
-                    // Acción de guardar perfil
-                  },
+                  onPressed: () {},
                 ),
               ),
 
@@ -205,11 +199,10 @@ class _ProfilePageState extends State<ProfilePage> {
                       movies.take(3).map((movie) => _movieCard(movie)).toList(),
                 ),
 
-              // Si aún no se cargan las películas, muestra un indicador de carga
               if (movies.isEmpty)
                 const Center(child: CircularProgressIndicator()),
 
-              // Calificación (Rating) debajo de las películas
+              // Calificación
               const SizedBox(height: 24),
               Text(
                 'Rate the Movies',
@@ -275,9 +268,7 @@ class _ProfilePageState extends State<ProfilePage> {
   // Widget para los botones de redes sociales
   Widget _socialMediaButton(String title, IconData icon, Color color) {
     return ElevatedButton.icon(
-      onPressed: () {
-        // Acción para agregar red social
-      },
+      onPressed: () {},
       icon: Icon(icon, color: Colors.white),
       label: Text(title),
       style: ElevatedButton.styleFrom(

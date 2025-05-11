@@ -17,6 +17,10 @@ export '../pages/Home/mostpopularpage.dart';
 export '../pages/Home/actorspage.dart';
 export '../pages/Home/actordetailpage.dart';
 export '../pages/Home/seriespage.dart';
+export '../pages/Home/moviespage.dart';
+export '../pages/Home/moviedetailpage.dart';
+export '../pages/Home/listpage.dart';
+export '../pages/Home/searchpage.dart';
 
 export 'package:prueb/config/routes.dart';
 export 'package:prueb/widgets/widgets.dart';

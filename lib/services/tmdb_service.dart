@@ -56,8 +56,8 @@ class Movie {
     return Movie(
       id: json['id'],
       title: json['title'],
-      posterPath: json['poster_path'] ?? '', // Asegúrate de manejar el valor nulo
-      overview: json['overview'] ?? '', // Lo mismo para overview
+      posterPath: json['poster_path'] ?? '', 
+      overview: json['overview'] ?? '', 
     );
   }
 }

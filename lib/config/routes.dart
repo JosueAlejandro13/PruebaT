@@ -1,5 +1,5 @@
 import 'package:prueb/screens/screens.dart';
-
+import 'package:prueb/services/movie_service.dart';
 
 final routerProvider = Provider<GoRouter>((ref) {
   return GoRouter(
@@ -46,7 +46,7 @@ final routerProvider = Provider<GoRouter>((ref) {
         name: 'first-page',
         builder: (context, state) => const Firtspage(),
       ),
-            GoRoute(
+      GoRoute(
         path: '/notifications',
         name: 'notifications',
         builder: (context, state) => const NotificationsPage(),
@@ -77,20 +77,33 @@ final routerProvider = Provider<GoRouter>((ref) {
         builder: (context, state) => const ActorsPage(),
       ),
       GoRoute(
-  path: '/actor/:id',
-  name: 'actorDetail',
-  builder: (context, state) {
-    final actorId = int.parse(state.pathParameters['id']!);
-    return ActorDetailPage(actorId: actorId);
-  },
-),
+        path: '/actor/:id',
+        name: 'actorDetail',
+        builder: (context, state) {
+          final actorId = int.parse(state.pathParameters['id']!);
+          return ActorDetailPage(actorId: actorId);
+        },
+      ),
       GoRoute(
         path: '/series',
         name: 'series',
         builder: (context, state) => const SeriesPage(),
       ),
+      GoRoute(
+        path: '/movies',
+        name: 'movies',
+        builder: (context, state) => const Moviespage(),
+      ),
+          GoRoute(
+      path: '/detail',
+      name: 'movieDetail',
+      builder: (context, state) {
+        final movie = state.extra as Movie;
+        return MovieDetailPage(movie: movie);
+      },
+    ),
 
-
+      
 
       /// ShellRoute para páginas con AppBar + BottomNavigation
       ShellRoute(
@@ -109,12 +122,12 @@ final routerProvider = Provider<GoRouter>((ref) {
           GoRoute(
             path: '/list',
             name: 'list',
-            builder: (context, state) => const HomePage(),
+            builder: (context, state) => const Listpage(),
           ),
           GoRoute(
             path: '/search',
             name: 'search',
-            builder: (context, state) => const HomePage(),
+            builder: (context, state) => const Searchpage(),
           ),
         ],
       ),

@@ -11,7 +11,12 @@ class MainScaffold extends StatefulWidget {
 class _MainScaffoldState extends State<MainScaffold> {
   int _selectedIndex = 0;
 
-  final List<String> _routes = ['/home', '/activity', '/list', '/search'];
+  final List<String> _routes = [
+    '/home',
+    '/activity',
+    '/list',
+    '/search',
+  ]; //Lista de rutas
 
   void _onItemTapped(int index) {
     if (_selectedIndex != index) {
@@ -23,8 +28,14 @@ class _MainScaffoldState extends State<MainScaffold> {
   @override
   Widget build(BuildContext context) {
     final screenWidth = MediaQuery.of(context).size.width;
-    final appBarColor = Theme.of(context).brightness == Brightness.dark ? Colors.black : Colors.white;
-    final appBarTextColor = Theme.of(context).brightness == Brightness.dark ? Colors.white : Colors.black;
+    final appBarColor =
+        Theme.of(context).brightness == Brightness.dark
+            ? Colors.black
+            : Colors.white;
+    final appBarTextColor =
+        Theme.of(context).brightness == Brightness.dark
+            ? Colors.white
+            : Colors.black;
 
     return Scaffold(
       appBar: AppBar(
@@ -40,7 +51,10 @@ class _MainScaffoldState extends State<MainScaffold> {
           children: [
             Text(
               'Hi User',
-              style: TextStyle(color: appBarTextColor, fontSize: screenWidth * 0.038),
+              style: TextStyle(
+                color: appBarTextColor,
+                fontSize: screenWidth * 0.038,
+              ),
             ),
             IconButton(
               icon: const Icon(Icons.person),
@@ -53,7 +67,7 @@ class _MainScaffoldState extends State<MainScaffold> {
       bottomNavigationBar: BottomNavigationBar(
         currentIndex: _selectedIndex,
         onTap: _onItemTapped,
-        selectedItemColor: Colors.blue,
+        selectedItemColor: const Color(0xFF0886B5),
         unselectedItemColor: Colors.grey,
         items: const [
           BottomNavigationBarItem(icon: Icon(Icons.home), label: 'Inicio'),

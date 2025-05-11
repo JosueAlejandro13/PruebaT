@@ -89,18 +89,18 @@ class _SeriesPageState extends State<SeriesPage> {
             children: [
               const SizedBox(height: 10),
               Text(
-                "Popular Series",
+                "Series",
                 style: TextStyle(fontSize: screenWidth * 0.045),
               ),
               const SizedBox(height: 10),
 
-              // 🔍 Buscador
+              // Buscador
               Padding(
                 padding: const EdgeInsets.symmetric(horizontal: 12),
                 child: TextField(
                   controller: _searchController,
                   decoration: InputDecoration(
-                    hintText: 'Buscar series...',
+                    hintText: 'Search series...',
                     prefixIcon: const Icon(Icons.search),
                     border: OutlineInputBorder(
                       borderRadius: BorderRadius.circular(10),
@@ -200,12 +200,9 @@ class _SeriesPageState extends State<SeriesPage> {
   }
 
   Widget _buildGenreButton(String genre) {
-    final isSelected = selectedGenre == genre;
     return ElevatedButton(
       onPressed: () => _filterByGenre(genre),
       style: ElevatedButton.styleFrom(
-        backgroundColor: isSelected ? Color(0xFF0886B5) : Colors.grey[300],
-        foregroundColor: isSelected ? Colors.white : Colors.black,
         padding: const EdgeInsets.symmetric(horizontal: 14, vertical: 8),
         shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(20)),
       ),

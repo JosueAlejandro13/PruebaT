@@ -41,7 +41,6 @@ class Signuppage extends StatelessWidget {
                 _buildLabel(context, 'Username', screenWidth),
                 _buildTextField(context, Icons.person, ''),
 
-                // Email
                 _buildLabel(context, 'Email', screenWidth),
                 _buildTextField(context, Icons.email, ''),
 
@@ -61,7 +60,6 @@ class Signuppage extends StatelessWidget {
                     context.push('/account-verification');
                   },
                 ),
-                // Checkbox con leyenda
                 const SizedBox(height: 20),
 
                 Row(

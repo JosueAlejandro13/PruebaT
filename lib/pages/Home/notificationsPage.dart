@@ -97,7 +97,6 @@ class NotificationsPage extends StatelessWidget {
                 ),
                 trailing: const Icon(
                   Icons.notifications_active,
-                  color:  Color(0xFF0886B5),
                 ),
               ),
             );

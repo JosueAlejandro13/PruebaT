@@ -56,11 +56,10 @@ class Accountverpage extends StatelessWidget {
                   buildCustomButton(
                     context: context,
                     onPressed: () {
-                      // Lógica de envío
                       context.push('/login');
                     },
                     isDarkMode: isDarkMode,
-                    text: 'Resend verification email', 
+                    text: 'Resend verification email',
                   ),
                 ],
               ),

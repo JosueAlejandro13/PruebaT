@@ -171,7 +171,7 @@ class _FirtspageState extends State<Firtspage> {
                                     child: Text(
                                       movie.title,
                                       textAlign: TextAlign.center,
-                                      style:  TextStyle(
+                                      style: TextStyle(
                                         fontWeight: FontWeight.bold,
                                         fontSize: screenWidth * 0.035,
                                       ),
@@ -220,7 +220,7 @@ class _FirtspageState extends State<Firtspage> {
               isSelectionComplete
                   ? () {
                     print('Películas seleccionadas: $_selectedMovieIds');
-                     context.push('/home');
+                    context.push('/home');
                   }
                   : null,
           child: Text(

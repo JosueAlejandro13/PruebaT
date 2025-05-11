@@ -66,32 +66,30 @@ class HomePage extends StatelessWidget {
                 );
               },
             ),
-
             const SizedBox(height: 24),
-
-      Row(
-  mainAxisAlignment: MainAxisAlignment.spaceAround,
-  children: [
-    buildCustomButtonHome(
-      context: context,
-      text: 'Movies',
-      isDarkMode: Theme.of(context).brightness == Brightness.dark,
-      onPressed: () => context.push('/movies'),
-    ),
-    buildCustomButtonHome(
-      context: context,
-      text: 'Series',
-      isDarkMode: Theme.of(context).brightness == Brightness.dark,
-      onPressed: () => context.push('/series'),
-    ),
-    buildCustomButtonHome(
-      context: context,
-      text: 'Actors',
-      isDarkMode: Theme.of(context).brightness == Brightness.dark,
-      onPressed: () => context.push('/actors'),
-    ),
-  ],
-),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.spaceAround,
+              children: [
+                buildCustomButtonHome(
+                  context: context,
+                  text: 'Movies',
+                  isDarkMode: Theme.of(context).brightness == Brightness.dark,
+                  onPressed: () => context.push('/movies'),
+                ),
+                buildCustomButtonHome(
+                  context: context,
+                  text: 'Series',
+                  isDarkMode: Theme.of(context).brightness == Brightness.dark,
+                  onPressed: () => context.push('/series'),
+                ),
+                buildCustomButtonHome(
+                  context: context,
+                  text: 'Actors',
+                  isDarkMode: Theme.of(context).brightness == Brightness.dark,
+                  onPressed: () => context.push('/actors'),
+                ),
+              ],
+            ),
 
             const SizedBox(height: 24),
 
@@ -135,27 +133,32 @@ class HomePage extends StatelessWidget {
                     itemCount: movies.length,
                     itemBuilder: (context, index) {
                       final movie = movies[index];
-                      return Container(
-                        width: 100,
-                        margin: const EdgeInsets.symmetric(horizontal: 8),
-                        child: Column(
-                          children: [
-                            ClipRRect(
-                              borderRadius: BorderRadius.circular(8),
-                              child: Image.network(
-                                'https://image.tmdb.org/t/p/w500${movie.posterPath}',
-                                height: 100,
-                                width: 100,
-                                fit: BoxFit.cover,
+                      return GestureDetector(
+                        onTap: () {
+                          context.push('/detail', extra: movie);
+                        },
+                        child: Container(
+                          width: 100,
+                          margin: const EdgeInsets.symmetric(horizontal: 8),
+                          child: Column(
+                            children: [
+                              ClipRRect(
+                                borderRadius: BorderRadius.circular(8),
+                                child: Image.network(
+                                  'https://image.tmdb.org/t/p/w500${movie.posterPath}',
+                                  height: 100,
+                                  width: 100,
+                                  fit: BoxFit.cover,
+                                ),
                               ),
-                            ),
-                            const SizedBox(height: 8),
-                            Text(
-                              movie.title,
-                              overflow: TextOverflow.ellipsis,
-                              style: const TextStyle(fontSize: 12),
-                            ),
-                          ],
+                              const SizedBox(height: 8),
+                              Text(
+                                movie.title,
+                                overflow: TextOverflow.ellipsis,
+                                style: const TextStyle(fontSize: 12),
+                              ),
+                            ],
+                          ),
                         ),
                       );
                     },
@@ -204,27 +207,32 @@ class HomePage extends StatelessWidget {
                     itemCount: movies.length,
                     itemBuilder: (context, index) {
                       final movie = movies[index];
-                      return Container(
-                        width: 100,
-                        margin: const EdgeInsets.symmetric(horizontal: 8),
-                        child: Column(
-                          children: [
-                            ClipRRect(
-                              borderRadius: BorderRadius.circular(8),
-                              child: Image.network(
-                                'https://image.tmdb.org/t/p/w500${movie.posterPath}',
-                                height: 100,
-                                width: 100,
-                                fit: BoxFit.cover,
+                      return GestureDetector(
+                        onTap: () {
+                          context.push('/detail', extra: movie);
+                        },
+                        child: Container(
+                          width: 100,
+                          margin: const EdgeInsets.symmetric(horizontal: 8),
+                          child: Column(
+                            children: [
+                              ClipRRect(
+                                borderRadius: BorderRadius.circular(8),
+                                child: Image.network(
+                                  'https://image.tmdb.org/t/p/w500${movie.posterPath}',
+                                  height: 100,
+                                  width: 100,
+                                  fit: BoxFit.cover,
+                                ),
                               ),
-                            ),
-                            const SizedBox(height: 8),
-                            Text(
-                              movie.title,
-                              overflow: TextOverflow.ellipsis,
-                              style: const TextStyle(fontSize: 12),
-                            ),
-                          ],
+                              const SizedBox(height: 8),
+                              Text(
+                                movie.title,
+                                overflow: TextOverflow.ellipsis,
+                                style: const TextStyle(fontSize: 12),
+                              ),
+                            ],
+                          ),
                         ),
                       );
                     },
@@ -246,7 +254,7 @@ class HomePage extends StatelessWidget {
                   icon: const Icon(Icons.arrow_forward),
                   onPressed: () {
                     context.push('/mostpopular');
-                  },  
+                  },
                 ),
               ],
             ),
@@ -274,27 +282,32 @@ class HomePage extends StatelessWidget {
                     itemCount: movies.length,
                     itemBuilder: (context, index) {
                       final movie = movies[index];
-                      return Container(
-                        width: 100,
-                        margin: const EdgeInsets.symmetric(horizontal: 8),
-                        child: Column(
-                          children: [
-                            ClipRRect(
-                              borderRadius: BorderRadius.circular(8),
-                              child: Image.network(
-                                'https://image.tmdb.org/t/p/w500${movie.posterPath}',
-                                height: 100,
-                                width: 100,
-                                fit: BoxFit.cover,
+                      return GestureDetector(
+                        onTap: () {
+                          context.push('/detail', extra: movie);
+                        },
+                        child: Container(
+                          width: 100,
+                          margin: const EdgeInsets.symmetric(horizontal: 8),
+                          child: Column(
+                            children: [
+                              ClipRRect(
+                                borderRadius: BorderRadius.circular(8),
+                                child: Image.network(
+                                  'https://image.tmdb.org/t/p/w500${movie.posterPath}',
+                                  height: 100,
+                                  width: 100,
+                                  fit: BoxFit.cover,
+                                ),
                               ),
-                            ),
-                            const SizedBox(height: 8),
-                            Text(
-                              movie.title,
-                              overflow: TextOverflow.ellipsis,
-                              style: const TextStyle(fontSize: 12),
-                            ),
-                          ],
+                              const SizedBox(height: 8),
+                              Text(
+                                movie.title,
+                                overflow: TextOverflow.ellipsis,
+                                style: const TextStyle(fontSize: 12),
+                              ),
+                            ],
+                          ),
                         ),
                       );
                     },
@@ -307,6 +320,4 @@ class HomePage extends StatelessWidget {
       ),
     );
   }
-
-
 }

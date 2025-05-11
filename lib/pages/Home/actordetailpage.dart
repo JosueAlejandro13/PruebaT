@@ -47,7 +47,7 @@ class _ActorDetailPageState extends State<ActorDetailPage> {
           } else if (snapshot.hasError) {
             return Center(child: Text("Error: ${snapshot.error}"));
           }
-
+          
           final data = snapshot.data!;
           final profile = data['profile'];
           final credits = data['credits'] as List;
