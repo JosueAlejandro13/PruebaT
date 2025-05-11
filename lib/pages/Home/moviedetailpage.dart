@@ -49,7 +49,6 @@ class _MovieDetailPageState extends State<MovieDetailPage> {
             ),
             const SizedBox(height: 16),
 
-            // Título de la película debajo del poster
             Text(
               widget.movie.title,
               style: TextStyle(fontSize: screenWidth * 0.045),
@@ -100,7 +99,7 @@ class _MovieDetailPageState extends State<MovieDetailPage> {
                       cast.isEmpty
                           ? const Text('No cast available')
                           : Container(
-                            height: 200, // Establecemos la altura del carrusel
+                            height: 200, 
                             child: ListView.builder(
                               scrollDirection: Axis.horizontal,
                               itemCount: cast.length,
@@ -168,7 +167,7 @@ class _MovieDetailPageState extends State<MovieDetailPage> {
                       cast.isEmpty
                           ? const Text('No cast available')
                           : Container(
-                            height: 200, // Establecemos la altura del carrusel
+                            height: 200, 
                             child: ListView.builder(
                               scrollDirection: Axis.horizontal,
                               itemCount: cast.length,
