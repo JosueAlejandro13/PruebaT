@@ -217,10 +217,11 @@ class _ListpageState extends State<Listpage> {
   }
 
   Widget _buildMovieCard(Movie movie, double screenWidth) {
-       return GestureDetector(
-                        onTap: () {
-                          context.push('/detail', extra: movie);
-                        }, child:  Card(
+     return GestureDetector(
+      onTap: () {
+      context.push('/detail', extra: movie);
+      }, 
+       child: Card(
       elevation: 4,
       shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(12)),
       clipBehavior: Clip.antiAlias,
